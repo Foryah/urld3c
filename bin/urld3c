@@ -1,0 +1,22 @@
+#!/usr/bin/env python
+
+from __future__ import print_function
+from sys import stdin, stderr, argv, version
+
+if version.startswith("2"):
+    from urllib import unquote, quote
+else:
+    from urllib.parse import unquote, quote
+
+std_in = stdin.read().strip()
+
+if len(argv) == 2:
+    if argv[1] == '-e':
+        print(quote(std_in), end='')
+    else:
+        print("Usage:\turldecode [-e|-h]", file=stderr)
+        print("Options:", file=stderr)
+        print("\t-e:\turl encode", file=stderr)
+        print("\t-h:\tsee this help section", file=stderr)
+else:
+    print(unquote(std_in), end='')
