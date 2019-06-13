@@ -6,10 +6,10 @@ Very simple script for url encoding/decoding the standard input.
 Usage
 -----
 ```
-Usage:  urld3c [-e|-h]
+Usage: urld3c [-e|-h]
 Options:
-    -e: url encode", file=stderr)
-    -h: see this help section", file=stderr)
+    -e: url encode
+    -h: see this help section
 ```
 
 Example:
