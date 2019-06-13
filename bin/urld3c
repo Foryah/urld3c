@@ -8,7 +8,7 @@ if version.startswith("2"):
 else:
     from urllib.parse import unquote, quote
 
-std_in = stdin.read().strip()
+std_in = stdin.read().rstrip("\n")
 
 if len(argv) == 2:
     if argv[1] == '-e':
